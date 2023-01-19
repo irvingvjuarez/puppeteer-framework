@@ -1,0 +1,28 @@
+{
+  "name": "puppeteer-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irvingvjuarez/puppeteer-framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irvingvjuarez/puppeteer-framework/issues"
+  },
+  "homepage": "https://github.com/irvingvjuarez/puppeteer-framework#readme",
+  "dependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.3.1",
+    "jest": "^29.3.1",
+    "jest-puppeteer": "^6.2.0",
+    "puppeteer": "^19.5.2"
+  }
+}
