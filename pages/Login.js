@@ -24,10 +24,7 @@ export default class Login extends BasePage {
 
 		await this.click(this.submitBtn)
 
-		await this.wait(5000)
-
-		const url = await this.getUrl()
-		console.log(url)
+		await this.wait(8000)
 	}
 
 	async validateLogin() {
