@@ -19,4 +19,8 @@ describe("Login steps", () => {
 	it("Validate login", async () => {
 		await loginPage.validateLogin()
 	}, MAX_TIMEOUT)
+
+	it("Booking flight", async () => {
+		await loginPage.bookFlight()
+	}, MAX_TIMEOUT)
 })

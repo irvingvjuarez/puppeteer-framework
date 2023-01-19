@@ -24,12 +24,26 @@ export default class Login extends BasePage {
 
 		await this.click(this.submitBtn)
 
-		await this.wait(8000)
+		await this.wait(5000)
 	}
 
 	async validateLogin() {
 		const currentUrl = await this.getUrl()
 		expect(currentUrl).toBe("https://phptravels.net/account/dashboard")
+	}
 
+	async bookFlight() {
+		await this.click("a[title='flights']")
+		await this.wait(5000)
+
+		await this.click("label[for='round-trip']")
+
+		await this.type("input[placeholder='Flying From']", "MIA - Miami Intl - Miami")
+		await this.type("input[placeholder='To Destination']", "VLC - Valencia - Valencia")
+
+		await this.click("#flights-search")
+		await this.wait(9000)
+
+		await page.waitForSelector("#data")
 	}
 }
