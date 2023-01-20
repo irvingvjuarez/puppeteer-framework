@@ -32,7 +32,7 @@ export default class Login extends BasePage {
 		expect(currentUrl).toBe("https://phptravels.net/account/dashboard")
 	}
 
-	async bookFlight() {
+	async searchFlight() {
 		await this.click("a[title='flights']")
 		await this.wait(5000)
 
@@ -45,5 +45,12 @@ export default class Login extends BasePage {
 		await this.wait(9000)
 
 		await page.waitForSelector("#data")
+	}
+
+	async bookFlight() {
+		await this.click(".catalog-panel > li:first-child form button[type='submit']")
+		await this.wait(5000)
+
+		await page.waitForSelector("form[method='POST']")
 	}
 }
